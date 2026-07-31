@@ -49,7 +49,7 @@ Issue labels tell you where something stands:
 - **Get Kestrel** — search **Kestrel** in the Garmin Connect IQ Store app, or on
   [apps.garmin.com](https://apps.garmin.com)
 - **Privacy policy** — https://nav1885.github.io/app-policies/kestrel/privacy.html
-- **Email** — nhc002@gmail.com
+- **Email** — [nav1885dev@gmail.com](mailto:nav1885dev@gmail.com)
 
 ## Supported devices
 
