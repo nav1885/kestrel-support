@@ -2,9 +2,11 @@
 # missing the watch model, which is the one field that makes it actionable.
 blank_issues_enabled: false
 contact_links:
-  - name: Email support
-    url: mailto:nhc002@gmail.com
-    about: Prefer not to use GitHub? Email instead — please include your watch model and firmware version.
+  # NOTE: GitHub only accepts http(s) here. A mailto: URL is silently dropped from the
+  # chooser, so the email address lives in the README and this links there instead.
+  - name: Prefer email? Contact details here
+    url: https://github.com/nav1885/kestrel-support#links
+    about: Not a GitHub user? Email instead — please include your watch model and firmware version.
   - name: Privacy policy
     url: https://nav1885.github.io/app-policies/kestrel/privacy.html
     about: What Kestrel reads, and what it never does (no data ever leaves your watch).
