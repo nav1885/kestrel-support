@@ -1,0 +1,116 @@
+name: Bug report
+description: Something in Kestrel looks wrong or doesn't work
+title: "[Bug]: "
+labels: ["type: bug", "status: needs info"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this.
+
+        **Please fill in the watch model and firmware version.** Almost every rendering
+        problem is specific to one screen size or one firmware build, so a report without
+        them usually can't be acted on.
+
+  - type: dropdown
+    id: family
+    attributes:
+      label: Which watch do you have?
+      description: Pick the closest family — you'll give the exact model next.
+      options:
+        - fēnix 8 (43mm / 47mm / 51mm) / tactix 8 / quatix 8
+        - fēnix 8 Pro
+        - fēnix 8 Solar
+        - fēnix 7 / 7S / 7X (including Pro / Solar)
+        - fēnix E
+        - epix (Gen 2) / epix Pro (Gen 2)
+        - Forerunner 955 / 965 / 970
+        - Forerunner 570
+        - Forerunner 255 / 265
+        - Forerunner 165 / 170 / 70
+        - Venu 2 / 2S / 2 Plus
+        - Venu 3 / 3S
+        - Venu 4
+        - Vívoactive 5 / 6
+        - Instinct 3 AMOLED
+        - MARQ (Gen 2)
+        - Enduro 3
+        - Descent (Mk3 / G2)
+        - Approach (S50 / S70)
+        - D2 (Air X10 / Mach 1 / Mach 2)
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: input
+    id: model_firmware
+    attributes:
+      label: Exact model and firmware version
+      description: >
+        On the watch: Settings → System → About. Please give both, e.g.
+        "fēnix 8 AMOLED 47mm, firmware 16.22".
+      placeholder: "fēnix 8 AMOLED 47mm, firmware 16.22"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Kestrel version
+      description: Shown in the Connect IQ app under the watch face's details.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: style
+    attributes:
+      label: Which style are you using?
+      options:
+        - Max (full data cockpit)
+        - Lite (minimal dial)
+        - Not sure
+        - Both / happens on either
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: How can it be reproduced?
+      description: >
+        If it only happens sometimes, say when — e.g. after a sync, only in always-on mode,
+        only during an activity, only after midnight.
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot or photo
+      description: >
+        A photo of the watch is genuinely the fastest way to diagnose a layout problem.
+        Drag an image here to attach it.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Quick checks
+      options:
+        - label: I checked the "Before you file" table in the README and this isn't one of those
+          required: false
+        - label: I searched existing issues for this problem
+          required: false

@@ -1,0 +1,68 @@
+name: Feature request
+description: Suggest a metric, layout, setting, or device to support
+title: "[Request]: "
+labels: ["type: feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion.
+
+        Please [search existing requests](../../issues?q=is%3Aissue+label%3A%22type%3A+feature%22)
+        first — if yours is already there, a 👍 on it counts for more than a duplicate,
+        because reactions are how requests get prioritised.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of request is this?
+      options:
+        - A metric I want to be able to show
+        - A layout or design change
+        - A new setting / customisation option
+        - Support for a watch model that isn't compatible
+        - A new style (alongside Max and Lite)
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: request
+    attributes:
+      label: What would you like?
+      description: Describe it as concretely as you can.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would this be useful to you?
+      description: >
+        What are you trying to see at a glance, and when? This matters more than it sounds —
+        screen space is the scarcest thing on a watch face, so knowing the actual use case
+        is what decides between two competing layouts.
+    validations:
+      required: true
+
+  - type: input
+    id: model
+    attributes:
+      label: Your watch model
+      description: Especially important for device-support requests.
+      placeholder: "Venu 3S"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: style
+    attributes:
+      label: Which style would this apply to?
+      options:
+        - Max (full data cockpit)
+        - Lite (minimal dial)
+        - Both
+        - A new style
+        - Not applicable
+    validations:
+      required: false
